@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Electric Diner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dosis:wght@300;600;800&family=Passion+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Dosis', sans-serif;
+            background: url('./images/diner-about.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #370808;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            /* dark overlay only */
+            z-index: -1;
+        }
+
+        main {
+            flex: 1;
+            padding-top: 70px;
+        }
+
+        .reservation-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+
+        /* Carte de formulaire */
+        .reservation-card {
+            background: rgba(31, 31, 31, 0.9);
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #5fb5bf;
+            backdrop-filter: blur(5px);
+        }
+
+        .form-title {
+            font: 800 1.8rem 'Archivo Black', sans-serif;
+            color: #fbe200b9;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+       
+        /* Formulaire */
+        .reservation-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fbe300;
+            font-weight: 600;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            font-family: 'Dosis', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        select:focus,
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(251, 227, 0, 0.3);
+            background: white;
+        }
+
+        .submit-btn {
+            background-color: rgba(55, 65, 5, 0.7);
+            color: #FFD700;
+            font: 800 1rem 'Archivo Black', sans-serif;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+            box-shadow: 0 4px 12px rgba(95, 181, 191, 0.3);
+            margin-top: 10px;
+        }
+
+        .submit-btn i {
+            font-size: 1.2rem;
+            color: #FFD700;
+            transition: color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: rgba(95, 182, 191, 0.7);
+            transform: scale(1.05);
+            color: #e7f9fb;
+        }
+
+        .submit-btn:hover i {
+            color: #e7f9fb;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="link">
+                <div class="logo-text">🗲 Electric Diner</div>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="link">
+                <div class="title">À propos</div>
+                <div class="bar"></div>
+            </a>
+            <a href="index.html" class="link">
+                <div class="title">Menu</div>
+                <div class="bar"></div>
+            </a>
+            <a href="index.html" class="link">
+                <div class="title">Chefs</div>
+                <div class="bar"></div>
+            </a>
+            <a href="#" class="link">
+                <div class="title">Réservation</div>
+                <div class="bar"></div>
+            </a>
+            <a href="contact.html" class="link">
+                <div class="title">Contact</div>
+                <div class="bar"></div>
+            </a>
+        </div>
+        <a href="order.html" id="l" >
+            <div class="title" id="commanderr">Commander Maintenant</div>
+            <div class="bar"></div>
+        </a>
+    </nav>
+    <main>
+        <section class="reservation-section">
+            <div class="menu-header">
+                <h2 class="diner-title">RÉSERVEZ VOTRE TABLE</h2>
+                <p class="diner-subtitle">24/7 SERVICE - TOUTE LA NUIT</p>
+            </div>
+
+            <div class="reservation-card">
+                <h2 class="form-title">FORMULAIRE DE RÉSERVATION</h2>
+
+                <form class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="day">Jour</label>
+                            <select id="day" name="day" required>
+                                <option value="">Sélectionnez un jour</option>
+                                <option value="monday">Lundi</option>
+                                <option value="tuesday">Mardi</option>
+                                <option value="wednesday">Mercredi</option>
+                                <option value="thursday">Jeudi</option>
+                                <option value="friday">Vendredi</option>
+                                <option value="saturday">Samedi</option>
+                                <option value="sunday">Dimanche</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Heure</label>
+                            <select id="time" name="time" required>
+                                <option value="">Sélectionnez une heure</option>
+                                <option value="10:00">10:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="22:00">22:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guests">Nombre de personnes</label>
+                            <input type="number" id="guests" name="guests" min="1" max="12"
+                                placeholder="Combien de personnes ?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="special">Demandes spéciales</label>
+                            <input type="text" id="special" name="special" placeholder="Allergies, anniversaire...">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">CONFIRMER LA RÉSERVATION</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2025 Electric Diner
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/dha7ayaiot" target="footer-link" class="footer-link">Instagram</a>
+                <a href="https://www.facebook.com/BrooklynManar2" target="footer-link" class="footer-link">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation au chargement
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.section-title, .reservation-card');
+            elements.forEach(el => {
+                el.style.animation = 'fadeIn 1s ease-out';
+            });
+
+            // Animation du bouton
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.addEventListener('mouseenter', () => {
+                submitBtn.style.animation = 'pulse 0.5s ease';
+            });
+
+            submitBtn.addEventListener('mouseleave', () => {
+                submitBtn.style.animation = '';
+            });
+        });
+    </script>
+</body>
+
+</html>

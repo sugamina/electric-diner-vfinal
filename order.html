@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diner Électrique - Menu</title>
+    <link rel="icon" href="images/logo-electric.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles-order.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="link">
+                <div class="logo-text">🗲 Electric Diner</div>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="link">
+                <div class="title">À propos</div>
+                <div class="bar"></div>
+            </a>
+            <a href="index.html" class="link">
+                <div class="title">Menu</div>
+                <div class="bar"></div>
+            </a>
+            <a href="index.html" class="link">
+                <div class="title">Chefs</div>
+                <div class="bar"></div>
+            </a>
+            <a href="reservation.html" class="link">
+                <div class="title">Réservation</div>
+                <div class="bar"></div>
+            </a>
+            <a href="contact.html" class="link">
+                <div class="title">Contact</div>
+                <div class="bar"></div>
+            </a>
+        </div>
+        <a href="#" id="l" >
+            <div class="title" id="commanderr">Commander Maintenant</div>
+            <div class="bar"></div>
+        </a>
+    </nav>
+    <div class="main-container">
+        <div class="content-container">
+
+            <div class="menu-header">
+                <h2 class="diner-title">Menu</h2>
+                <p class="diner-subtitle">Simple. Frais. Delicieux.</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="showCategory(event,'starters')">Entrées</button>
+                <button class="tab-btn" onclick="showCategory(event,'burgers')">Burgers</button>
+                <button class="tab-btn" onclick="showCategory(event,'breakfast')">Petit-déjeuner & Milkshakes</button>
+            </div>
+
+            <div class="menu-content">
+                <div class="menu-items-container">
+                    <!-- Starters Category -->
+                    <div class="menu-items active" id="starters">
+                        <div class="menu-item" onclick="addToCart('Poisson Croustillant', 5.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/crispy-fish.jpg')">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Poisson Croustillant</div>
+                                    <div class="item-price">5,99 €</div>
+                                </div>
+                                <div class="item-desc">Filets de poisson dorées avec une texture croquante.</div>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="addToCart('Rondelles d\'Oignon', 4.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/onion-rings.jpg')">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Rondelles d'Oignon</div>
+                                    <div class="item-price">4,99 €</div>
+                                </div>
+                                <div class="item-desc">Rondelles d'oignon dorées croquants!</div>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="addToCart('Mini Hot-Dogs', 5.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/chili-dog.jpg')"></div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Mini Hot-Dogs</div>
+                                    <div class="item-price">5,99 €</div>
+                                </div>
+                                <div class="item-desc">Mini pains briochés garnis de saucisses fumées et relish maison.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="addToCart('Salade Pittsburgh-Style', 6.59)">
+                            <div class="item-image" style="background-image: url('./images/menu/salad.jpg')"></div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Salade Pittsburgh-Style</div>
+                                    <div class="item-price">6,59 €</div>
+                                </div>
+                                <div class="item-desc">Salade verte garnie de steak grillé, frites et fromage.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Burgers Category -->
+                    <div class="menu-items" id="burgers">
+                        <div class="menu-item" onclick="addToCart('Burger Électrique', 9.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/burger.jpg')"></div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Burger Électrique</div>
+                                    <div class="item-price">9,99 €</div>
+                                </div>
+                                <div class="item-desc">Steak juteux, bacon croustillant, fromage fondu et sauce épicée.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="addToCart('Cheeseburger Classique', 8.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/burger2.avif')"></div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Cheeseburger Classique</div>
+                                    <div class="item-price">8,99 €</div>
+                                </div>
+                                <div class="item-desc">Steak juteux avec fromage américain et notre sauce spéciale dans
+                                    un bun toasté.</div>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="addToCart('Burger Bacon BBQ', 10.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/burger1.avif')"></div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Burger Bacon BBQ</div>
+                                    <div class="item-price">10,99 €</div>
+                                </div>
+                                <div class="item-desc">Double steak avec bacon croustillant, cheddar, oignons rings et
+                                    sauce BBQ fumée.</div>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="addToCart('Crunchy Chicken Burger', 10.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/chicken-burger.webp')">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Crunchy Chicken Burger</div>
+                                    <div class="item-price">10,99 €</div>
+                                </div>
+                                <div class="item-desc">Poulet pané croustillant, salade, tomates, pickles et sauce
+                                    maison dans un pain brioché.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Breakfast Category -->
+                    <div class="menu-items" id="breakfast">
+                        <div class="menu-item" onclick="addToCart('Milkshake au Chocolat', 5.49)">
+                            <div class="item-image"
+                                style="background-image: url('./images/menu/chocolate-milkshake.jpg')"></div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Milkshake au Chocolat</div>
+                                    <div class="item-price">5,49 €</div>
+                                </div>
+                                <div class="item-desc">Milkshake au chocolat riche et onctueux.</div>
+                            </div>
+                        </div>
+                        <div class="menu-item" onclick="addToCart('Pancakes Délice', 6.99)">
+                            <div class="item-image" style="background-image: url('./images/menu/pancakes.jpg')"></div>
+                            <div class="item-info">
+                                <div class="item-header">
+                                    <div class="item-name">Pancakes Délice</div>
+                                    <div class="item-price">6,99 €</div>
+                                </div>
+                                <div class="item-desc">Pancakes moelleux servis avec des œufs frais.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Section - Fixed on the right -->
+                <div class="order-section">
+                    <div class="order-panel">
+                        <div class="order-header">VOTRE COMMANDE</div>
+                        <div class="order-items" id="orderItems">
+                            <div class="empty-cart">Votre panier est vide</div>
+                        </div>
+                        <div class="order-total" id="orderTotal">Total: 0,00 €</div>
+                        <button class="checkout-btn" onclick="checkout()">VALIDER LA COMMANDE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2025 Electric Diner
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/dha7ayaiot" target="footer-link" class="footer-link">Instagram</a>
+                <a href="https://www.facebook.com/BrooklynManar2" target="footer-link" class="footer-link">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"> </script>
+</body>
+
+</html>

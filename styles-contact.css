@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Tilt+Warp&display=swap');
+
+/* Retro Electric Diner Theme */
+:root {
+    --gold: #FFD700;
+    --teal: #5fb6bf;
+    --red: #d02b35;
+    --dark: #000000;
+    --light: #d4d5cf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: 'Tilt Warp', sans-serif;
+}
+
+
+
+
+/* Contact Section */
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/diner-contact.jpg') center/cover;
+    z-index: 0;
+    border-bottom: 1px solid #fbe300;
+
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(9, 4, 4, 0.7);
+    z-index: -1;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-out;
+}
+
+.contact .content h2 {
+    font-size: 3rem;
+    font-family: 'Passion One', sans-serif;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.contact .content p {
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.contact .content .slogan {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: var(--teal);
+    font-weight: 400;
+    animation: fadeIn 1.5s ease-in-out;
+    text-shadow: 0 0 10px rgba(0, 206, 209, 0.7);
+}
+
+/* Container Layout */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    margin-top: 50px;
+
+}
+
+/* Contact Info Boxes */
+.contactInfo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contactInfo .box {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    min-width: 280px;
+    padding: 25px;
+    background-color: rgba(30, 30, 30, 0.9);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.contactInfo .box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.contactInfo .box:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.contactInfo .box:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.contactInfo .box:hover {
+    transform: translateY(-5px);
+    border-color: var(--teal);
+}
+
+.contactInfo .box .icon {
+    min-width: 50px;
+    height: 50px;
+    background-color: var(--red);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.contactInfo .box .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo .box .text h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--teal);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.contactInfo .box .text p {
+    font-size: 14px;
+    color: var(--light);
+}
+
+/* Form Section */
+.contact-form {
+    flex: 1;
+    min-width: 400px;
+    max-width: 550px;
+}
+
+.contentForm {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--teal);
+    box-shadow: 0 5px 20px rgba(0, 206, 209, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contentForm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 206, 209, 0.3);
+}
+
+.contentForm h2 {
+    font-size: 28px;
+    color: var(--gold);
+    font-family: 'Passion One', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.inputBox:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.inputBox:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.inputBox:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.inputBox:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.inputBox i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: var(--teal);
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.inputBox input,
+.inputBox textarea {
+    width: 100%;
+    padding: 12px 45px 12px 15px;
+    background: rgba(50, 50, 50, 0.7);
+    border: 1px solid var(--teal);
+    color: var(--light);
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.inputBox textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+    outline: none;
+}
+
+.inputBox input[type="submit"] {
+    cursor: pointer;
+    background: var(--red);
+    color: var(--light);
+    border: none;
+    font-weight: 600;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.inputBox input[type="submit"]:hover {
+    background: var(--gold);
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Map Section */
+.contact-map {
+    flex: 1;
+    min-width: 400px;
+    max-width: 550px;
+}
+
+.map-header {
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    margin-bottom: -5px;
+    border: 2px solid var(--gold);
+    border-bottom: none;
+}
+
+.map-header h2 {
+    font-size: 28px;
+    color: var(--gold);
+    font-family: 'Passion One', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+    border-top: none;
+    animation: fadeIn 1s ease-out;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Rating Stars */
+.rating-container {
+    text-align: center;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.rating-container h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-family: 'Passion One', sans-serif;
+    text-transform: uppercase;
+}
+
+.rating {
+    display: inline-flex;
+    gap: 10px;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 20px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+    border: 2px solid var(--gold);
+}
+
+.star {
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #444;
+}
+
+.star:hover {
+    transform: scale(1.2);
+    color: var(--gold);
+}
+
+#rating-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--teal);
+    transition: color 0.3s ease;
+}
+
+.star.hovered {
+    color: var(--gold) !important;
+    transform: scale(1.1);
+}
+
+.star.selected {
+    color: var(--gold) !important;
+    transform: scale(1.1);
+    animation: starSelect 0.3s ease;
+}
+
+
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes starSelect {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}

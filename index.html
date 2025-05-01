@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Diner</title>
+    <link rel="icon" href="images/logo-electric.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#header" class="link">
+                <div class="logo-text">🗲 Electric Diner</div>
+            </a>
+        </div>
+        <div class="menu">
+            <a href="#about" class="link">
+                <div class="title">À propos</div>
+                <div class="bar"></div>
+            </a>
+            <a href="#menu" class="link">
+                <div class="title">Menu</div>
+                <div class="bar"></div>
+            </a>
+            <a href="#chefs" class="link">
+                <div class="title">Chefs</div>
+                <div class="bar"></div>
+            </a>
+            <a href="reservation.html" class="link">
+                <div class="title">Réservation</div>
+                <div class="bar"></div>
+            </a>
+            <a href="contact.html" class="link">
+                <div class="title">Contact</div>
+                <div class="bar"></div>
+            </a>
+        </div>
+        <a href="order.html" id="l" >
+            <div class="title" id="commanderr">Commander Maintenant</div>
+            <div class="bar"></div>
+        </a>
+    </nav>
+    <header id="header" class="hero-header">
+        <img src="./images/diner-hero.jpg" alt="Intérieur rétro du diner" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1 class="hero-title">ELECTRIC DINER</h1>
+            <p class="hero-subtitle neon-text">DEPUIS 1958 • 24/7 • TOUTE LA NUIT</p>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="section">
+            <div class="text-center">
+                <p class="section-subtitle">À propos</p>
+                <h2 class="diner-title" style="margin: 0 0 30px 0;">Nos Spécialités</h2>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-img-bg">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="feature-title">Menu Varié</h3>
+                    <p class="feature-description">Il y en a pour tous les goûts</p>
+                    <div class="learn-more">
+                        <a href="order.html">Explorer <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-img-bg">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="feature-title">Chefs Experts</h3>
+                    <p class="feature-description">Des décennies d'expérience</p>
+                    <div class="learn-more">
+                        <a href="#chefs">Rencontrez-nous <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-img-bg">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">Repas Rapides</h3>
+                    <p class="feature-description">Des plats délicieux et rapides</p>
+                    <div class="learn-more">
+                        <a href="reservation.html">Reserver Maintenant <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="about-container">
+                <div class="about-card">
+                    <h2 class="card-title"><i class="fas fa-store"></i> NOTRE RESTAURANT</h2>
+                    <div class="about-text">
+                        <p>Bienvenue au Grease & Grub, où la cuisine classique des diners américains rencontre l'attitude du rock 'n' roll. Depuis notre ouverture, nous servons les burgers les plus juteux, les shakes les plus crémeux, et le service le plus amical en ville.</p>
+                        <p>Notre décoration rétro et nos morceaux de jukebox vous transporteront à l'âge d'or des diners, tandis que notre menu innovant garde les choses fraîches et excitantes.</p>
+                    </div>
+                </div>
+                
+                <div class="about-card">
+                    <h2 class="card-title"><i class="fas fa-clock"></i> HORAIRES</h2>
+                    <ul class="hours-list">
+                        <li><span>Lundi</span><span>12h - 21h</span></li>
+                        <li><span>Mardi</span><span>12h - 21h</span></li>
+                        <li><span>Mercredi</span><span>12h - 22h</span></li>
+                        <li><span>Jeudi</span><span>12h - 22h</span></li>
+                        <li><span>Vendredi</span><span>12h - 22h</span></li>
+                        <li><span>Samedi</span><span>12h - 22h</span></li>
+                        <li><span>Dimanche</span><span>12h - 22h</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section">
+            <div class="menu-header">
+                <h2 class="diner-title">Menu & Délices</h2>
+                <p class="diner-subtitle">BURGERS, MILKSHAKES ET TOUT CE QU’IL Y A ENTRE LES DEUX !</p>
+                <ul class="filters_menu">
+                    <li class="active" data-filter="*">Tous</li>
+                    <li data-filter=".starters">Entrées</li>
+                    <li data-filter=".burgers">Burgers</li>
+                    <li data-filter=".breakfast">Petit-déjeuner & Milkshakes</li>
+                </ul>
+            </div>
+        
+            <div class="menu-container">
+                <!-- Catégorie Entrées -->
+                <div class="menu-category teal starters">
+                    <div class="menu-item">
+                        <img src="./images/menu/crispy-fish.jpg" alt="Poisson croustillant" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Poisson Croustillant</span>
+                                <span class="item-price">5,99 $</span>
+                            </div>
+                            <p class="item-desc">Filets de poisson dorées avec une texture croquante.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category teal starters">
+                    <div class="menu-item">
+                        <img src="./images/menu/onion-rings.jpg" alt="Rondelles d'oignon" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Rondelles d'Oignon</span>
+                                <span class="item-price">4,99 $</span>
+                            </div>
+                            <p class="item-desc">Rondelles d'oignon dorées croquants!</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category teal starters">
+                    <div class="menu-item">
+                        <img src="./images/menu/chili-dog.jpg" alt="Rondelles d'oignon" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Mini Hot-Dogs</span>
+                                <span class="item-price">5,99 $</span>
+                            </div>
+                            <p class="item-desc">Mini pains briochés garnis de saucisses fumées et relish maison.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category teal starters">
+                    <div class="menu-item">
+                        <img src="./images/menu/salad.jpg" alt="Salade Pittsburgh-Style" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Salade Pittsburgh-Style</span>
+                                <span class="item-price">6.59 $</span>
+                            </div>
+                            <p class="item-desc">Salade verte garnie de steak grillé, frites et fromage.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Catégorie Burgers -->
+                <div class="menu-category pink burgers">
+                    <div class="menu-item">
+                        <img src="./images/menu/burger.jpg" alt="Burger Électrique" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Burger Électrique</span>
+                                <span class="item-price">9,99 $</span>
+                            </div>
+                            <p class="item-desc">Steak juteux, bacon croustillant, fromage fondu et sauce épicée.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category pink burgers">
+                    <div class="menu-item">
+                        <img src="./images/menu/burger2.avif" alt="Cheeseburger Classique" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Cheeseburger Classique</span>
+                                <span class="item-price">8,99 $</span>
+                            </div>
+                            <p class="item-desc">Steak juteux avec fromage américain et notre sauce
+                                spéciale dans un bun toasté.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category pink burgers">
+                    <div class="menu-item">
+                        <img src="./images/menu/burger1.avif" alt="Burger Bacon BBQ" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Burger Bacon BBQ</span>
+                                <span class="item-price">10,99 $</span>
+                            </div>
+                            <p class="item-desc">Double steak avec bacon croustillant, cheddar, oignons rings et sauce BBQ
+                                fumée.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category pink burgers">
+                    <div class="menu-item">
+                        <img src="./images/menu/chicken-burger.webp" alt="Crunchy Chicken Burger" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Crunchy Chicken Burger</span>
+                                <span class="item-price">10,99 $</span>
+                            </div>
+                            <p class="item-desc">Poulet pané croustillant, salade, tomates, pickles et sauce maison dans un pain brioché.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Catégorie Petit-déjeuner & Milkshakes -->
+                <div class="menu-category blue breakfast">
+                    <div class="menu-item">
+                        <img src="./images/menu/chocolate-milkshake.jpg" alt="Milkshake au chocolat" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Milkshake au Chocolat</span>
+                                <span class="item-price">5,49 $</span>
+                            </div>
+                            <p class="item-desc">Milkshake au chocolat riche et onctueux.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-category blue breakfast">
+                    <div class="menu-item">
+                        <img src="./images/menu/pancakes.jpg" alt="Pancakes" class="item-image">
+                        <div class="item-content">
+                            <div class="item-header">
+                                <span class="item-name">Pancakes Délice</span>
+                                <span class="item-price">6,99 $</span>
+                            </div>
+                            <p class="item-desc">Pancakes moelleux servis avec des œufs frais.</p>
+                        </div>
+                        <div class="order-container">
+                            <a href="order.html" class="order-now">
+                                Commander
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="view-more-container">
+                <a id="viewMoreBtn" class="view-more-btn" href="order.html">Voir plus</a>
+            </div>
+        </section>
+        
+        <section id="chefs" class="section">
+            <div class="menu-header">
+                <h2 class="diner-title">Nos Chefs</h2>
+            </div>
+            <div class="chefs-container">
+                <div class="chef-card">
+                    <img src="./images/chef-1.jpg" alt="Chef Jules Moreau" class="chef-photo">
+                    <h3 class="chef-name">Chef Jules Moreau</h3>
+                    <p class="chef-role">Spécialiste des Burgers</p>
+                    <div class="verified-badge">
+                        <i class="fas fa-check-circle"></i> Chef vérifié
+                    </div>
+                    <p class="chef-bio">La tête pensante derrière notre célèbre Electric Burger avec une touche piquante qui électrisera vos papilles !</p>
+                    <div class="chef-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="chef-card">
+                    <img src="./images/chef-2.jpg" alt="Chef Mia Thompson" class="chef-photo">
+                    <h3 class="chef-name">Chef Mia Thompson</h3>
+                    <p class="chef-role">Magicien du Petit-Déjeuner</p>
+                    <div class="verified-badge">
+                        <i class="fas fa-check-circle"></i> Chef vérifié
+                    </div>
+                    <p class="chef-bio">Crée de la magie chaque matin avec des pancakes moelleux et des milkshakes riches pour bien commencer votre journée.</p>
+                    <div class="chef-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="chef-card">
+                    <img src="./images/chef-3.jpg" alt="Chef Amine Bakri" class="chef-photo">
+                    <h3 class="chef-name">Chef Amine Bakri</h3>
+                    <p class="chef-role">Expert en Friture & Saveurs</p>
+                    <div class="verified-badge">
+                        <i class="fas fa-check-circle"></i> Chef vérifié
+                    </div>
+                    <p class="chef-bio">Offre un croquant parfait dans chaque rondelle d'oignon et filet de poisson croustillant !</p>
+                    <div class="chef-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2025 Electric Diner
+            </div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/dha7ayaiot" target="footer-link" class="footer-link">Instagram</a>
+                <a href="https://www.facebook.com/BrooklynManar2" target="footer-link" class="footer-link">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

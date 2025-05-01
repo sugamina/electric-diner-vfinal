@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grease & Grub - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --red: #E63946;
+            --dark: #1A1A1A;
+            --light: #F8F9FA;
+            --teal: #5fb6bf;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .section-title {
+            color: var(--gold);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--red));
+        }
+        
+        .about-card {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 10px;
+            padding: 2rem;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-title {
+            color: var(--teal);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-title i {
+            color: var(--gold);
+        }
+        
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .hours-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed rgba(255, 215, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .phone-numbers {
+            margin-top: 1rem;
+        }
+        
+        .phone-numbers a {
+            color: var(--gold);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .phone-numbers a:hover {
+            color: var(--teal);
+        }
+        
+        .about-text {
+            line-height: 1.6;
+        }
+        
+        .neon-sign {
+            font-family: 'Bungee', cursive;
+            color: var(--red);
+            text-shadow: 0 0 10px var(--red), 0 0 20px var(--red);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="about-section">
+        <div class="neon-sign">ABOUT</div>
+        
+        <div class="about-card">
+            <h2 class="card-title"><i class="fas fa-store"></i> OUR RESTAURANT</h2>
+            <div class="about-text">
+                <p>Welcome to Grease & Grub, where classic American diner fare meets rock 'n' roll attitude. Since our founding, we've been serving up the juiciest burgers, creamiest shakes, and friendliest service in town.</p>
+                <p>Our retro-inspired decor and jukebox tunes will transport you back to the golden age of diners, while our innovative menu keeps things fresh and exciting.</p>
+            </div>
+        </div>
+        
+        <div class="about-card">
+            <h2 class="card-title"><i class="fas fa-clock"></i> HOURS</h2>
+            <ul class="hours-list">
+                <li><span>Monday</span><span>12pm - 9pm</span></li>
+                <li><span>Tuesday</span><span>12pm - 9pm</span></li>
+                <li><span>Wednesday</span><span>12pm - 10pm</span></li>
+                <li><span>Thursday</span><span>12pm - 10pm</span></li>
+                <li><span>Friday</span><span>12pm - 10pm</span></li>
+                <li><span>Saturday</span><span>12pm - 10pm</span></li>
+                <li><span>Sunday</span><span>12pm - 10pm</span></li>
+            </ul>
+        </div>
+        
+        <div class="about-card">
+            <h2 class="card-title"><i class="fas fa-phone"></i> PHONE</h2>
+            <div class="phone-numbers">
+                <a href="tel:2122601212"><i class="fas fa-phone-alt"></i> 212.260.1212</a>
+                <a href="tel:2122607049"><i class="fas fa-fax"></i> 212.260.7049</a>
+            </div>
+            
+            <h2 class="card-title" style="margin-top: 2rem;"><i class="fas fa-info-circle"></i> ABOUT US</h2>
+            <div class="about-text">
+                <p>At Grease & Grub, we're passionate about quality ingredients, authentic flavors, and creating memorable dining experiences. Our chefs bring decades of experience to every dish we serve.</p>
+                <p>Come join us for a meal and experience the perfect blend of nostalgia and innovation!</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
